@@ -22,6 +22,7 @@
 <link href="<?php echo CSS_URL;?>/component-deferred-media.css" rel="stylesheet" type="text/css" media="all">
 <link href="<?php echo CSS_URL;?>/section-footer.css" rel="stylesheet" type="text/css" media="all">
 <link href="<?php echo CSS_URL;?>/custom.css" rel="stylesheet" type="text/css" media="all">
+<link href="<?php echo CSS_URL;?>/responsive.css" rel="stylesheet" type="text/css" media="all">
 
 <!-- script -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.js"></script>

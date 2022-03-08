@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo ADMIN_PATH . '/css/dashicons.min.css' ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo ADMIN_PATH . '/css/forms.min.css' ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo ADMIN_PATH . '/css/login.min.css' ?>">
+	<script type="text/javascript" src="<?php echo JS_URL . '/jquery-3.4.1.min.js' ?>"></script>
 </head>
 <body class="login wp-core-ui">
 <div id="login">
@@ -44,6 +45,22 @@ if(!empty($data['error'])){
 			}, 200);
 		}
 		wp_attempt_focus();
+		jQuery(document).ready(function(){
+			jQuery('.wp-hide-pw').click(function(){
+				var pass = document.getElementById('user_pass');
+				console.log(pass.type);
+				if(pass.type == 'password'){
+					console.log('type is password');
+					pass.type = 'text';
+					jQuery(this).attr('aria-label','Hide password');
+					jQuery(this).children('span').toggleClass('dashicons-visibility').toggleClass('dashicons-hidden');
+				}else{
+					pass.type = 'password';
+					jQuery(this).attr('aria-label','Show password');
+					jQuery(this).children('span').toggleClass('dashicons-hidden').toggleClass('dashicons-visibility');
+				}
+			});
+		})
 	</script>
 </div>
 </body>

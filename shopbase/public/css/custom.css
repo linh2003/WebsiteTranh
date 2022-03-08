@@ -67,22 +67,8 @@ h1.header__heading .header__heading-link{
     border-top: 0.1rem solid rgba(var(--color-foreground),.08);
 	padding-top: 2rem;
 }
-@media screen and (min-width: 750px){
-	#main-cart-items.cart__items {
-		padding-bottom: 2rem;
-	}
-	.outlane-row.outlane-small-up-2.outlane-medium-up-2.outlane-large-up-2.outlane-features__grid {
-		display: flex;
-		flex-wrap: wrap;
-	}
-	.outlane-column.outlane-features__item {
-		padding-bottom: 15px;
-		width: 50%;
-	}
-	.outlane-columns.outlane-medium-4 {
-		float: left;
-		width: 33.3333%;
-	}
+.cart__ctas .button {
+    width: 100%;
 }
 .rootDiv {
 	max-width: 72.6rem;
@@ -167,6 +153,36 @@ textarea.fieldSize {
     align-items: center;
     display: inline-flex;
 }
+.checkout_success {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 3rem 0 1.5rem 0;
+    text-align: center;
+}
+.checkout_success .checkout-text{
+    margin: 4.5rem 0 2rem;
+}
+.pBody .message_error {
+    font-size: 12px;
+    margin-top: 5px;
+    color: red;
+    font-weight: 100;
+}
+.phone_suggest {
+    font-size: 13px;
+    color: red;
+}
+.btn_phone_suggest {
+    padding: 1px 10px;
+    border: 0.1rem solid transparent;
+    box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground),.55);
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+}
+.field_phone .phone_input {
+    display: flex;
+}
 
 @keyframes marquee {
   from {transform: translateX(0);}
@@ -182,18 +198,4 @@ textarea.fieldSize {
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
-}
-@media (min-width: 576px){
-	.col-sm-3 {
-		-webkit-box-flex: 0;
-		-ms-flex: 0 0 25%;
-		flex: 0 0 25%;
-		max-width: 25%;
-	}
-	.col-sm-9 {
-		-webkit-box-flex: 0;
-		-ms-flex: 0 0 75%;
-		flex: 0 0 75%;
-		max-width: 75%;
-	}
 }
